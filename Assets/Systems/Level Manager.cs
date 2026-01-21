@@ -16,6 +16,7 @@ public class LevelManager : MonoBehaviour
         targetLevel.gameObject.SetActive(true);
 
         player.transform.position = spawnPoint;
+        
         currentLevel = targetLevel;
 
 

@@ -4,20 +4,19 @@ public class LevelManager : MonoBehaviour
 {
     private GameObject current;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
-    
+
 
     // Update is called once per frame
-    
-    public GameObject lv1;
-    public GameObject lv2;
-    
-    public void LevelSwap()
+    public GameObject player;
+    public GameObject currentLevel;
+
+    public void LevelSwap(GameObject targetLevel, Vector2 spawnPoint)
     {
-        lv1.gameObject.SetActive(false);
-        lv2.gameObject.SetActive(true);
+        currentLevel.gameObject.SetActive(false);
+        targetLevel.gameObject.SetActive(true);
 
-
-
+        player.transform.position = spawnPoint;
+        currentLevel = targetLevel;
 
 
 
